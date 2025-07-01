@@ -2,6 +2,7 @@ package org.example;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.CsvFileSource;
 import org.junit.jupiter.params.provider.CsvSource;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -46,7 +47,6 @@ class MainTest {
     @ParameterizedTest
     @CsvSource({
             "Pass wort1! , true",
-            "Aa345678@ , true",
             "UniquePass123 , false"
     })
     void spaceNewLineTab(String password, boolean check) {
